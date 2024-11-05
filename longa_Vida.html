@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #fd9ec6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 60%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-btn {
+            background-color: rgb(238, 71, 121);
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .submit-btn:hover {
+            background-color: rgb(243, 74, 125);
+        }
+        .operation-group {
+            margin-top: 20px;
+        }
+        .operation-group input[type="submit"] {
+            background-color: #FF6347;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>GESTÃO</h1>
+        
+        <!-- Formulário para Inserir Cliente -->
+        <form action="inserir_cliente.php" method="POST">
+            <h3>Novo Plano</h3>
+            <label for="nome">Nome:</label>
+            <input type="text" id="text" name="text" required>
+
+            <input type="submit" value="Alterar Cliente" class="submit-btn">
+
+
+        </form>
+
+        <!-- Formulário para Alterar Cliente -->
+        <form action="alterar_cliente.php" method="POST">
+            <h3>alterar nome</h3>
+            <label for="telefone_alterar">Telefone:</label>
+            <input type="telefone" id="telefone_alterar" name="telefone" required>
+
+            <label for="nome_alterar">Nome:</label>
+            <input type="nome" id="nome_alterar" name="nome" required>
+
+            <label for="cpf_alterar">Cpf:</label>
+            <input type="cpf" id="cpf_alterar" name="cpf" required>
+
+            <label for="endereço_alterar">Endereço:</label>
+            <input type="endereço" id="endereço_alterar" name="endereço" required>
+
+            <label for="sexo_alterar">sexo:</label>
+            <input type="radio" id="sexo_alterar" name="sexo" required>
+
+            <input type="submit" value="Alterar Cliente" class="submit-btn">
+        </form>
+
+        <!-- Formulário para Excluir Cliente -->
+        <form action="excluir_cliente.php" method="POST">
+            <h3>Excluir Plano</h3>
+            <label for="numero_excluir">Número:</label>
+            <input type="number" id="numero_excluir" name="numero" required>
+
+            <input type="submit" value="Excluir Cliente" class="submit-btn">
+        </form>
+
+        <!-- Formulário para Consultar Cliente -->
+        <form action="consultar_cliente.php" method="GET">
+            <h3>Consultar</h3>
+            <label for="numero_consultar">Número:</label>
+            <input type="number" id="numero_consultar" name="numero" required>
+
+            <input type="submit" value="Consultar Cliente" class="submit-btn">
+        </form>
+
+    </div>
+
+</body>
+</html>
